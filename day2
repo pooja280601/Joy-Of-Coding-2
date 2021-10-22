@@ -1,0 +1,24 @@
+#include<stdio.h>
+int main(){
+	int a[100],i,j,n,k,x,y,t;
+	printf("Enter the array size:\n");
+	scanf("%d",&n);
+	printf("enter array elements:\n");
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+	printf("enter the sum k:\n");
+	scanf("%d",&k);
+	for(i=0;i<n;i++)
+		for(j=1;j<n;j++)
+			if(a[i]+a[j]==k){
+				x=i;
+				y=j;
+				t=1;
+				break;
+			}
+	if(t==1){
+		printf("indices are found at %d %d\n",x,y);
+	}
+	else
+		printf("no indices found\n");
+}
