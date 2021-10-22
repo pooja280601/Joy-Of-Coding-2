@@ -1,0 +1,26 @@
+#include<stdio.h>
+int dup(int n,int a[]){
+	for(int i=0;i<n;i++){
+		for(int j=i+1;j<n;j++){
+			if(a[i]==a[j])
+			    return 0;
+		}
+	}
+		return 1;
+						
+}
+
+int main(){
+	int a[10],c;int n;
+	printf("Enter the size of array:\n");
+	scanf("%d",&n);
+	printf("Enter the array elements:\n");
+	for(int b=0;b<n;b++)
+		scanf("%d",&a[b]);
+	int l;
+	l=dup(n,a);
+	if(l==1)
+	    printf("Array is unqiue!\n");
+	else
+	    printf("Array is duplicate\n");
+}
